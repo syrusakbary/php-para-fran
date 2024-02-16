@@ -1,2 +1,5 @@
-<?php print("Hello 👋, from Wasmer Edge!"); ?>
+<?php
+
+print("Hello fran!");
+
 
