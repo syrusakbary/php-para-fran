@@ -1,0 +1,26 @@
+[[module]]
+name = "php"
+source = "php-cgi.wasm"
+abi = "wasi"
+
+[[command]]
+name = "php"
+module = "php"
+runner = "wcgi"
+
+[command.annotations.wasi]
+atom = "php"
+env = [ "DOCUMENT_ROOT=/app", "SCRIPT_FILENAME=/app/index.php",]
+[command.annotations.wcgi]
+dialect = "rfc-3875"
+
+[package]
+name = "syrusakbary/php-para-fran"
+version = "0.2.0"
+description = "PHP website via WCGI starter package"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/syrusakbary/php-para-fran"
+
+[fs]
+app = "app"
